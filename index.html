@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="imagem">
+            <h1><img src="imagem/a.png"></h1>
+        </div>
+        <div class="principal">
+
+            <textarea name="palavra" id="palavra" placeholder="Digite seu texto"></textarea>
+
+            <div>
+                <button id="limpar" class="limpar" onclick="Limpar()">Limpar</button>
+                <p><img class="caracter" src="imagem/caracter.png" />Apenas letras minúsculas e sem acento.</p>
+
+                <button onclick="Criptografar()">Criptografar</button>
+                <button class="botão-descriptografar" onclick="Descriptografar()"> Descriptografar</button>
+
+            </div>
+        </div>
+
+        <div class="secundaria">
+             <div id="bloco-estatico" class="bloco-estatico">
+                <img src="imagem/boneco.png" />
+                <h2>Nenhuma mensagem encontrada</h2>
+                <p class="texto">Digite um texto que você deseja criptografar ou descriptografar</p>
+            </div>
+            <div id="bloco-retorno" class="bloco-retorno">
+                <textarea name="resultado" id="resultado" readonly cols="30 " rows="20"></textarea>
+                <button id="copiado" onclick="Copiar()">Copiar</button>
+                
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+</body>
+
+<script src="./script.js"> </script>
+
+</html>
