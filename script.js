@@ -24,7 +24,7 @@ function Criptografar() {
 
 function Descriptografar() {
 
-    var palavraDescriptografada = resultado.value.replaceAll("ufat", "u");
+    var palavraDescriptografada = document.getElementById("palavra").value.replaceAll("ufat", "u");
     palavraDescriptografada = palavraDescriptografada.replaceAll("ober", "o");
     palavraDescriptografada = palavraDescriptografada.replaceAll("ai", "a");
     palavraDescriptografada = palavraDescriptografada.replaceAll("imes", "i");
