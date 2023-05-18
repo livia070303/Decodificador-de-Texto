@@ -2,9 +2,13 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Decodificador</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,10 +23,10 @@
             <div>
                 <button id="limpar" class="limpar" onclick="Limpar()">Limpar</button>
                 <p><img class="caracter" src="imagem/caracter.png" />Apenas letras minúsculas e sem acento.</p>
-
-                <button onclick="Criptografar()">Criptografar</button>
-                <button class="botão-descriptografar" onclick="Descriptografar()"> Descriptografar</button>
-
+                <div class="botoes">
+                    <button onclick="Criptografar()">Criptografar</button>
+                    <button class="botão-descriptografar" onclick="Descriptografar()"> Descriptografar</button>
+                </div>
             </div>
         </div>
 

@@ -8,6 +8,7 @@ main{
     height: 95%;
     width: 100%;
     justify-content: center;
+    font-family: 'Inter', sans-serif;
 }
 .principal {
     width: 60%;
@@ -121,3 +122,46 @@ button:hover {
     outline: 0;
 }
 
+@media(max-width: 1174px) {
+    main{
+        flex-direction: column;
+        height: auto;
+    }
+    .principal{
+        width: 100%;
+    }
+    .principal textarea{
+        font-size: large;
+        height: 29vh;
+    }
+    .secundaria img {
+        display: none;
+    }
+    .secundaria{
+        width: 100%;
+        margin-left: 0;
+    }
+    button {
+        margin-bottom: 0.6rem;
+        width: 93vw;
+    }
+    #resultado {
+        width: 81%;
+        height: 3%;
+    }
+    #copiado {
+        width: 75vw;
+    }
+    .bloco-retorno {
+        margin-bottom: 33px;
+    }
+    .bloco-estatico {
+        width: 95%;
+    }
+}
+@media(min-width: 500px) and (max-width: 1174px) {
+    button {
+        width: 46vw;
+    }
+
+}
