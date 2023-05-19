@@ -154,6 +154,7 @@ button:hover {
     }
     .bloco-retorno {
         margin-bottom: 33px;
+        padding-top: 3rem;
     }
     .bloco-estatico {
         width: 95%;
