@@ -121,6 +121,11 @@ button:hover {
     border: none;
     outline: 0;
 }
+footer{
+    color: #495057;
+    opacity: 0.8;
+    text-align: center;
+}
 
 @media(max-width: 1174px) {
     main{

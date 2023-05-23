@@ -55,6 +55,7 @@ function SemAcento(palavra) {
 
 }
 
+
 function Copiar() {
     navigator.clipboard.writeText(resultado.value);
     document.getElementById("copiado").style.background = "limegreen";
