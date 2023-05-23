@@ -9,7 +9,7 @@ let resultado = document.getElementById("resultado");
 
 function Criptografar() {
     let palavra = document.getElementById("palavra").value;
-    if(EhMinusculo(palavra) && SemAcento(palavra)) {
+    if(Validacao(palavra)) {
         var palavraCriptografada = palavra.replaceAll("e", "enter");
         palavraCriptografada = palavraCriptografada.replaceAll("i", "imes");
         palavraCriptografada = palavraCriptografada.replaceAll("a", "ai");
@@ -21,14 +21,12 @@ function Criptografar() {
         document.getElementById("bloco-estatico").style.display = "none";
         document.getElementById("copiado").style.background = "#EFF1FA";
     } else{
-        alert("Somente letras minuscúlas e sem acento!")
+        alert("Somente letras minuscúlas, sem acento e sem caracteres especiais!");
     }
-
 }
-
 function Descriptografar() {
     var palavra = document.getElementById("palavra").value;
-    if(EhMinusculo(palavra) && SemAcento(palavra)) {
+    if( Validacao(palavra)) {
         var palavraDescriptografada = palavra.replaceAll("ufat", "u");
         palavraDescriptografada = palavraDescriptografada.replaceAll("ober", "o");
         palavraDescriptografada = palavraDescriptografada.replaceAll("ai", "a");
@@ -41,27 +39,20 @@ function Descriptografar() {
         document.getElementById("copiado").style.background = "#EFF1FA";
 
     } else{
-        alert("Somente letras minúsculas e sem acento!");
+        alert("Somente letras minuscúlas, sem acento e sem caracteres especiais!");
     }
-
 }
-function EhMinusculo(palavra) {
-    var minusculo = palavra.toLowerCase();
-    return palavra === minusculo;
+function Validacao(palavra) {
+    //          a-z: aceita de a-z minúsculo
+    //          \s: aceita espaço em branco
+    var caracter = palavra.normalize("NFD").replace(/[^a-z\s]/g);
+    return caracter === palavra;
 }
-function SemAcento(palavra) {
-    var semAcento = palavra.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-    return semAcento === palavra;
-
-}
-
-
 function Copiar() {
     navigator.clipboard.writeText(resultado.value);
     document.getElementById("copiado").style.background = "limegreen";
     document.getElementById("copiado").innerText = "Copiado ";
 }
-
 function Limpar() {
     document.getElementById("palavra").value = "";
     document.getElementById("resultado").value = "";
